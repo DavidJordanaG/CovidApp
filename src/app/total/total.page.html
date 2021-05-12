@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dades totals Catalunya</ion-title>
+  </ion-toolbar>
+  <ion-back-button defaultHref="inici"></ion-back-button>
+</ion-header>
+
+
+<ion-content>
+  
+  <ion-item *ngFor="let a of totals">
+    <p>{{a.data|date:'M/d/yy'}} </p>
+    <ul>
+      <li>Casos nous : {{a.nous_casos_diaris_confirmats}}</li>
+      <li>Defuncions : {{a.defuncions_di_ries }}</li>
+      <li>Total casos : {{a.total_de_casos_confirmats}}</li>
+      <li>Total morts : {{a.total_de_defuncions}}</li>
+    </ul>  
+     </ion-item>
+
+</ion-content>

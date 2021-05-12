@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Vacunes per municipi</ion-title>
+  </ion-toolbar>
+  <ion-back-button defaultHref="inici"></ion-back-button>
+  <ion-searchbar showCancelButton animated placeholder="Buscar Municipi" (ionChange)="buscar($event)"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item *ngFor="let a of backup">
+      <ion-label class="ion-text-wrap">
+        <ion-text color="primary">
+          <h3>{{ a.municipi }}</h3>
+        </ion-text>
+        <p>{{ a.fabricant }} / Vacunats: {{ a.total }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
